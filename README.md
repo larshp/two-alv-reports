@@ -1,5 +1,7 @@
 # The case of two ALV reports and git for deployment
 
+## Scenario?
+
 Assumption: QAS system and PRD system
 
 Assumption: the two ALV reports already exist in QAS and PRD
@@ -27,8 +29,18 @@ CHG1 is accepted by business before CHG2, and would like to urgently have the ch
 
 But none of the commits in the history have a consistent state for deployment of CHG1, they will all draw some unwanted changes from CHG2!
 
-With classic CTS the blue and red changes are not intertwined, but must be manually kept track of(tooling does exist, and solutions are known to not get into this kind of trouble)
+## Solutions?
+
+Making releases to customers every 3 months(like some large software companies) will of cause solve the issue, but it should not be the benchmark in a world with buzzword trends.
+
+With classic CTS the blue and red changes are not intertwined, but must be manually kept track of(tooling does exist, and solutions are known to not get into this kind of trouble).
+
+Use git for development, not deployment. SAP offers great tooling like CTS to deploy to complex landscapes with massive amounts of code.
+
+[Cherry picking](https://medium.com/captain-contrat-engineering/cherry-picking-our-way-to-production-fc36968c7664)? Yeap, well, it rewrites history, which we'd probably not like to do as default for critical business systems.
 
 > It feels like it would end up with the same as STMS, a list of branches for each system that has not been merged to that system/branch yet, with similar pitfalls as CTS.
+>
+> Each traditional CTS transport can be seen as a “mini” branch for the objects that it contains, which is automatically rebased when imported to the target system. It would also be possible to put every object in its own package to simulate this behavior in git, but it would be a lot of work and not help developers.
 >
 > Reference https://blogs.sap.com/2020/11/05/cts-is-beautiful/
