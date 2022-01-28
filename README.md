@@ -37,6 +37,10 @@ Making releases to customers every 3 months(like some large software companies) 
 
 Add commits to rollback CHG2? Possible, but not feasible, think of a system with 10 developers and 100 changes in flight.
 
+Test every change in isolation on separate systems => every change needs a full SAP system running, not feasible due to cost, not feasible as QAS systems are typically connected to landscape.
+
+Tet one change at a time on QAS system, not feasible, continuous waiting and coordination.
+
 With classic CTS the blue and red changes are not intertwined, but must be manually kept track of(tooling does exist, and solutions are known to not get into this kind of trouble).
 
 Use git for development, not deployment. SAP offers great tooling like CTS to deploy to complex landscapes with massive amounts of code.
@@ -48,3 +52,9 @@ Use git for development, not deployment. SAP offers great tooling like CTS to de
 > Each traditional CTS transport can be seen as a “mini” branch for the objects that it contains, which is automatically rebased when imported to the target system. It would also be possible to put every object in its own package to simulate this behavior in git, but it would be a lot of work and not help developers.
 >
 > Reference https://blogs.sap.com/2020/11/05/cts-is-beautiful/
+
+Classic CTS is also not perfect, but challenges are well understood and tooling(partner and SAP) for mitigation exists.
+
+Note bugfixes could be based of the original branch, but will give the same result, plus sequence of the last two merges does not change the outcome,
+
+![](bugfixed2.drawio.svg)
