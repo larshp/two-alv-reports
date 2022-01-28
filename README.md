@@ -1,8 +1,10 @@
 # The case of two ALV reports and git for deployment
 
 Assumption: QAS system and PRD system
+
 Assumption: the two ALV reports already exist in QAS and PRD
-Assumption: the reports are in the same git repository(because, clearly we dont want to have one repository per object?)
+
+Assumption: the reports are in the same git repository(because, clearly we don't want to have one repository per object?)
 
 Two developers, two changes, both developers create a branch, and push two commits,
 
