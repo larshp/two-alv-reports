@@ -45,6 +45,8 @@ Only have one change in-progress per repository => not buzzword friendly => not 
 
 With classic CTS the blue and red changes are not intertwined, but must be manually kept track of(tooling does exist, and solutions are known to not get into this kind of trouble).
 
+Create feature toggles for all changes, hmm
+
 Use git for development, not deployment. SAP offers great tooling like CTS to deploy to complex landscapes with massive amounts of code.
 
 [Cherry picking](https://medium.com/captain-contrat-engineering/cherry-picking-our-way-to-production-fc36968c7664)? Yeap, well, it rewrites history, which we'd probably not like to do as default for critical business systems.
