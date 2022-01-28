@@ -33,6 +33,8 @@ But none of the commits in the history have a consistent state for deployment of
 
 Making releases to customers every 3 months(like some large software companies) will of cause solve the issue, but it should not be the benchmark in a world with buzzword trends.
 
+Add commits to rollback CHG2? Possible, but not feasible, think of a system with 10 developers and 100 changes in flight.
+
 With classic CTS the blue and red changes are not intertwined, but must be manually kept track of(tooling does exist, and solutions are known to not get into this kind of trouble).
 
 Use git for development, not deployment. SAP offers great tooling like CTS to deploy to complex landscapes with massive amounts of code.
