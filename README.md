@@ -6,13 +6,15 @@ Assumption: QAS system and PRD system
 
 Assumption: the two ALV reports already exist in QAS and PRD
 
-Assumption: the reports are in the same git repository(because, clearly we don't want to have one repository per object?)
+Assumption: the two ALV reports are in the same git repository(because, clearly we don't want to have one repository per object?)
 
-Two developers, two changes, both developers create a branch, and push two commits,
+Two developers, two changes,
 
 CHG1: Add new column COL1 to ZALV1
 
 CHG2: Add new column COL2 to ZALV2
+
+both developers create a branch, and push two commits,
 
 ![](commits.drawio.svg)
 
