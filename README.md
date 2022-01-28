@@ -39,7 +39,9 @@ Add commits to rollback CHG2? Possible, but not feasible, think of a system with
 
 Test every change in isolation on separate systems => every change needs a full SAP system running, not feasible due to cost, not feasible as QAS systems are typically connected to landscape.
 
-Tet one change at a time on QAS system, not feasible, continuous waiting and coordination.
+Test one change at a time on QAS system, not feasible, continuous waiting and coordination.
+
+Only have one change in-progress per repository => not buzzword friendly => not feasible
 
 With classic CTS the blue and red changes are not intertwined, but must be manually kept track of(tooling does exist, and solutions are known to not get into this kind of trouble).
 
