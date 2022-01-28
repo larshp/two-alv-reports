@@ -22,7 +22,7 @@ Development finishes, reviewed, QA'ed and all, say CHG1 before CHG2, say simple 
 
 ![](deployed.drawio.svg)
 
-It happens that both changes contain a bug, business would like to move the column one step to the left, the developers create bugfixes in new branches, the old ones have been merged.
+It happens that each change contains a bug, the developers create bugfixes in new branches, the old ones have been merged.
 (Assumption: dont rewrite history)
 
 ![](bugfixed.drawio.svg)
