@@ -18,7 +18,7 @@ both developers create a branch, and push two commits,
 
 ![](commits.drawio.svg)
 
-Development finishes, reviewed, QA'ed and all, say CHG1 before CHG1, say simple classic merge, deployed to QAS for business testing,
+Development finishes, reviewed, QA'ed and all, say CHG1 before CHG2, say simple classic merge, deployed to QAS for business testing,
 
 ![](deployed.drawio.svg)
 
@@ -58,3 +58,19 @@ Classic CTS is also not perfect, but challenges are well understood and tooling(
 Note bugfixes could be based of the original branch, but will give the same result, plus sequence of the last two merges does not change the outcome,
 
 ![](bugfixed2.drawio.svg)
+
+## With Classic CTS
+
+Developer 1 does changes for CHG1 in DEVK900001
+
+Developer 2 does changes for CHG2 in DEVK900002
+
+Release transport of copies to QAS when development is done
+
+Bugfixes are added in the open transport, and TOC released to QAS again
+
+Release the transport to move the isolated change to production
+
+* Auditing ignored, just like the git scenario
+* Systems out of sync ignored, just like the git scenario
+* Dependencies/sequences ignored, just like the git scenario
