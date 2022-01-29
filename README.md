@@ -63,6 +63,8 @@ Classic CTS is also not perfect, but challenges are well understood and tooling(
 
 Branches per system, multiple repos, multiple rebasing PRs => classic CTS is easier, and deployment should be centralized(?)
 
+[Git branching strategy to achieve continuous delivery](https://sairamkrish.medium.com/git-branching-strategy-for-true-continuous-delivery-eade4435b57e)
+
 Note bugfixes could be based of the original branch, but will give the same result, plus sequence of the last two merges does not change the outcome,
 
 ![](bugfixed2.drawio.svg)
