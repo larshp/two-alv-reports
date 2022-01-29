@@ -61,6 +61,8 @@ Classic CTS is also not perfect, but challenges are well understood and tooling(
 
 [Re-thinking feature branch deployments](https://octopus.com/blog/rethinking-feature-branch-deployments)
 
+Branches per system, multiple repos, multiple rebasing PRs => classic CTS is easier, and deployment should be centralized(?)
+
 Note bugfixes could be based of the original branch, but will give the same result, plus sequence of the last two merges does not change the outcome,
 
 ![](bugfixed2.drawio.svg)
