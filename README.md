@@ -69,6 +69,20 @@ Note bugfixes could be based of the original branch, but will give the same resu
 
 ![](bugfixed2.drawio.svg)
 
+## Full Monty
+
+Have dedicated branches for each system,
+
+![](monty.drawio.svg)
+
+Note that PRD gets a commit which has not been tested on other systems, same problem as classic CTS, but typically not the wanted approach when using git.
+
+dev + qas + prd branches are difficult to consolidate, which goes against git's single source of truth.
+
+Merges are created manually by developers? Typically not this kind of flexibility to have for deployment?
+
+Note that the classic CTS import queue can be seen as an automatic creation of merge commits and the corresponding status.
+
 ## With Classic CTS
 
 Developer 1 does changes for CHG1 in DEVK900001
@@ -84,3 +98,14 @@ Release the transport to move the isolated change to production
 * Auditing ignored, just like the git scenario
 * Systems out of sync ignored, just like the git scenario
 * Dependencies/sequences ignored, just like the git scenario
+
+## Preventing import errors
+
+Note that this solution solves both the git based and classic CTS scenario.
+
+Before performing changes in the target system, have a dummy system where the change is validated before import.
+If the import fails, the system can be rolled back, just do a database rollback.
+
+![](landscape.drawio.svg)
+
+Note that this approach can work in all SAP landscapes(?), including very old ones.
