@@ -83,6 +83,8 @@ Merges are created manually by developers? Typically not this kind of flexibilit
 
 Note that the classic CTS import queue can be seen as an automatic creation of merge commits and the corresponding status.
 
+The latest branch/commit for each change must be kept track of manually, like manually keeping track of grouped classic transports.
+
 ## With Classic CTS
 
 Developer 1 does changes for CHG1 in DEVK900001
